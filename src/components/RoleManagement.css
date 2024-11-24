@@ -1,0 +1,228 @@
+/* General Styles */
+.role-management {
+  margin: 20px;
+  text-align: center; /* Center content in role-management */
+}
+
+/* Table Styles */
+.role-management table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.role-management table, th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.role-management th {
+  background-color: #1f2937;
+  color: white;
+}
+
+.permissions-checkboxes {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  gap: 150px; /* Space between checkboxes */
+  align-items: center; /* Align checkboxes and labels vertically */
+  justify-content: flex-start; /* Align to the left */
+  margin-top: 10px; /* Spacing above the checkboxes group */
+}
+
+.permissions-checkboxes label {
+  display: flex; /* Arrange label and checkbox inline */
+  align-items: center; /* Vertical alignment */
+  gap: 5px; /* Space between checkbox and label text */
+  margin: 5px 0; /* Vertical margin for better spacing */
+}
+
+.permissions-checkboxes input[type="checkbox"] {
+  margin: 0; /* Remove default browser margin */
+  padding: 0; /* Consistent padding */
+  transform: scale(1.5); /* Make checkboxes larger */
+}
+
+table td {
+  vertical-align: top; /* Align checkboxes to the top of their row */
+}
+
+table td .permissions-checkboxes {
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+table td .permissions-checkboxes label {
+  width: auto; /* Ensure labels don't stretch */
+}
+
+/* Add Role Form */
+.add-role-form {
+  margin-top: -200px;
+  padding: 15px;
+  background: #1f2937;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 500px; /* Limit the max width */
+  margin: 2px auto; /* Center the form */
+}
+
+.add-role-form h3 {
+  margin-bottom: 1px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+}
+
+.add-role-form input,
+.add-role-form button,
+.add-role-form .permissions-checkboxes input {
+  margin: 10px 0;
+  padding: 12px; /* Increased padding for input and button */
+  width: 100%; /* Ensures inputs and buttons have the same width */
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.add-role-form input[type="text"] {
+  border-color: #4caf50;
+}
+
+.add-role-form button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease-in-out;
+}
+
+.add-role-form button:hover {
+  background: #1e40af;
+  transform: translateY(-2px); /* Lift effect on hover */
+}
+
+.add-role-form button:active {
+  transform: translateY(2px); /* Button presses down on click */
+}
+
+.add-role-form .permissions-checkboxes label {
+  width: auto; /* Keep labels auto-width for flexibility */
+  margin-bottom: 10px;
+  color: white;
+}
+
+/* Action Buttons (Edit, Delete, Role) */
+table td button {
+  background: transparent; /* Ensure no background color */
+  border: none; /* Remove border */
+  padding: 8px 12px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+table td button:focus,
+table td button:hover {
+  background: transparent; /* Remove white box on hover or focus */
+  outline: none; /* Remove default focus outline */
+  transform: scale(1.02); /* Slight zoom effect */
+}
+
+/* Edit Button */
+.edit-btn i {
+  color: #4caf50; /* Green color for edit icon */
+}
+
+/* Delete Button */
+.delete-btn i {
+  color: #ef4444; /* Red color for delete icon */
+}
+
+/* Role Button */
+.role-btn i {
+  color: #2563eb; /* Blue color for role icon */
+}
+
+/* Hover Effects for Action Buttons */
+.add-role-button:hover,
+.edit-btn:hover,
+.delete-btn:hover {
+  transform: scale(1.02);
+}
+
+/* Disabled Checkboxes */
+input[type="checkbox"]:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .add-role-form {
+    padding: 15px;
+    max-width: 95%;
+  }
+
+  table th,
+  table td {
+    font-size: 12px;
+  }
+
+  table td button {
+    font-size: 12px;
+  }
+
+  .permissions-checkboxes {
+    gap: 10px; /* Slightly reduce gap on smaller screens */
+  }
+
+  .permissions-checkboxes label {
+    width: 100%; /* Allow checkboxes to stack vertically */
+  }
+}
+
+/* General Layout for Sidebar */
+.sidebar {
+  position: fixed; /* Keeps the sidebar fixed in place */
+  top: 0;
+  left: 0;
+  height: 100vh; /* Full height of the viewport */
+  width: 250px; /* Adjust the width as per your layout */
+  background-color: #f8f9fa; /* Background color */
+  border-right: 1px solid #ddd; /* Optional border for separation */
+  overflow-y: auto; /* Enable vertical scrolling if the content exceeds the height */
+  padding: 20px; /* Add some spacing inside the sidebar */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+  z-index: 1000; /* Ensure it stays above other elements */
+}
+
+/* Sidebar Links */
+.sidebar a {
+  display: block;
+  padding: 10px 15px;
+  color: #333;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar a:hover {
+  background-color: #4caf50;
+}
+
+/* Adjust Content Section */
+.content {
+  margin-left: 250px; /* Same as the sidebar width */
+  padding: 20px;
+}
+
+.permissions-checkboxes input[type="checkbox"] {
+  margin: 0; /* Remove default browser margin */
+  padding: 0; /* Consistent padding */
+  transform: scale(1.5); /* Consistent checkbox size */
+}

@@ -1,0 +1,29 @@
+/* Sidebar Styles */
+.sidebar {
+  position: fixed; /* Fix the sidebar on the left */
+  top: 0;
+  left: 0;
+  height: 100vh; /* Full viewport height */
+  width: 250px; /* Width of the sidebar */
+  background-color: #333; /* Dark background for visibility */
+  color: white; /* Text color for contrast */
+  padding: 20px; /* Padding inside the sidebar */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+  z-index: 1000; /* Ensures the sidebar is on top of other content */
+  overflow-y: auto; /* Enables scrolling if sidebar content overflows */
+}
+
+.sidebar a {
+  display: block;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  background-color: #444; /* Slight background change on hover */
+}
+
+.sidebar .active-link {
+  background-color: #575757; /* Active link color */
+}
